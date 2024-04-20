@@ -1,0 +1,65 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+
+    // general
+    "no-var": "error",
+    "array-callback-return": "error",
+    "no-await-in-loop": "error",
+    "no-constant-condition": "error",
+    "no-console": "off",
+    "eqeqeq": "warn",
+    "no-alert": "warn",
+    "no-unreachable": "warn",
+    "arrow-spacing": "warn",
+    "comma-spacing": "warn",
+    "no-multi-spaces": "warn",
+    "semi": ["warn", "never"],
+    "no-trailing-spaces": "warn",
+    "spaced-comment": "warn",
+    "object-curly-spacing": ["warn", "always"],
+    "array-bracket-spacing": ["warn", "never"],
+    "quotes": ["warn", "double"],
+    "no-eval": "error",
+    "indent": ["warn", 2],
+    "require-await": "error",
+    "no-empty": "warn",
+    "no-unused-vars": "off",
+
+    // typescript
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+
+    // react
+    "react/no-unescaped-entities": "off",
+    "react/boolean-prop-naming": "warn",
+    "react/iframe-missing-sandbox": "warn",
+    "react/jsx-tag-spacing": "warn",
+
+    // react-hooks
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
